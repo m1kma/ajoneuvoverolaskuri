@@ -1,2 +1,2 @@
-# ajoneuvoverolaskuri
-Arvioi laskurilla vuotuinen ajoneuvovero
+# Ajoneuvoverolaskuri
+Tällä laskurilla voit arvioida karkeasti ajoneuvoveron ja vakuutusten vuosikustannukset. Laskuri ottaa huomioon myös seisontapäivät. Laskuria voi käyttää esimerkiksi arvioimaan miten ajoneuvon liikennekäytöstä poisto vaikuttaa kokonaiskustannuksiin. Laskurissa on otettu huomioon uusi korotettu dieselvero 5,5 senttiä. Laskuri on suunniteltu erityisesti matkailuajoneuvojen kustannuslaskentaan.
