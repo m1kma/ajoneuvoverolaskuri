@@ -49,6 +49,7 @@ function calculate() {
     const radioMassa = document.getElementById('radio-massa');
     const perusvero = document.getElementById('result-perusvero-value');
     const verotyht = document.getElementById('result-verotyht-value');
+    const verotyhtpaiva = document.getElementById('result-verotyht-paiva-value');
     const kaytostapoistojenkustannus = document.getElementById('result-kaytostapoistojenkustannus-value');
     const kaskovakuutus = document.getElementById('result-kaskovakuutus-value');
     const liikennevakuutus = document.getElementById('result-liikennevakuutus-value');
@@ -59,6 +60,8 @@ function calculate() {
     const radioKasko25Alennus= document.getElementById('radio-25-alennus');
     const radioKasko50alennus = document.getElementById('radio-50-alennus');
     const radioKasko75alennus = document.getElementById('radio-75-alennus');
+    const liikennekayttovahintaan = document.getElementById('result-liikennekayttovahintaan-value');
+
 
     // Käyttövoimavero
     // (B3/100)*(B4/100)*B5
@@ -81,7 +84,10 @@ function calculate() {
     perusvero.textContent = parseInt(perusveroTaulukosta / 365 * kayttopaivatVal);
 
     // Verot yhteensä
-    verotyht.textContent = parseInt(kayttovoimavero.textContent) + parseInt(perusvero.textContent);
+    const verotyhtValue = parseInt(kayttovoimavero.textContent) + parseInt(perusvero.textContent);
+    verotyht.textContent = verotyhtValue;
+    verotyhtpaiva.textContent = (verotyhtValue / kayttopaivatVal).toFixed(2);
+    liikennekayttovahintaan.textContent = Math.round(10 / verotyhtpaiva.textContent); // kustannus vähintään 10€/päivä
 
     // Käytöstäpoistojen kustannus
     // käytöstäpoistojen lukumäärä * käytöstäpoiston hinta
