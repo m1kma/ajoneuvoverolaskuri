@@ -54,6 +54,7 @@ function calculate() {
     const liikennevakuutus = document.getElementById('result-liikennevakuutus-value');
     const vakuutuksetyhteensa = document.getElementById('result-vakuutuksetyhteensa-value');
     const kaikkiyhteensa = document.getElementById('result-kaikkiyhteensa-value');
+    const kaikkiyhteensaSticky = document.getElementById('result-kaikkiyhteensa-value-sticky');
     const paastotPrefix = document.getElementById('paastot-slider-prefix');
     const radioKasko25Alennus= document.getElementById('radio-25-alennus');
     const radioKasko50alennus = document.getElementById('radio-50-alennus');
@@ -98,7 +99,11 @@ function calculate() {
     // liikennevakuutushinta/365*kayttöpäiviä
     liikennevakuutus.textContent = parseInt(liikennevakuutusSlider.value / 365 * kayttopaivatVal);
     vakuutuksetyhteensa.textContent = parseInt(kaskovakuutus.textContent) + parseInt(liikennevakuutus.textContent);
-    kaikkiyhteensa.textContent = parseInt(verotyht.textContent) + parseInt(kaytostapoistojenkustannus.textContent) + parseInt(vakuutuksetyhteensa.textContent);
+
+    const kaikkiyhteensaValue = parseInt(verotyht.textContent) + parseInt(kaytostapoistojenkustannus.textContent) + parseInt(vakuutuksetyhteensa.textContent);
+    kaikkiyhteensa.textContent = kaikkiyhteensaValue;
+    kaikkiyhteensaSticky.textContent = kaikkiyhteensaValue;
+
 }
 
 // https://www.finlex.fi/fi/laki/ajantasa/2003/20031281
