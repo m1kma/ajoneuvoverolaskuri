@@ -7,15 +7,16 @@
     <title>Ajoneuvoverolaskuri matkailuautoille</title>
 
     <!-- Meta Description -->
-    <meta name="description" content="Arvioi ajoneuvoveron ja vakuutusten vuotuiset kustannukset matkailuajoneuvolle helposti laskurilla. Sisältää seisontapäivien ja liikennekäytöstä poiston huomioimisen.">
-    <meta name="keywords" content="ajoneuvoverolaskuri, matkailuauto, ajoneuvovero, seisontapäivät, kustannuslaskenta, liikennekäytöstä poisto, matkailuauton vakuutus">
+    <!-- <meta name="description" content="Arvioi ajoneuvoveron ja vakuutusten vuotuiset kustannukset matkailuautolle helposti laskurilla. Sisältää seisontapäivien ja liikennekäytöstä poiston huomioimisen.">
+    <meta name="keywords" content="ajoneuvoverolaskuri, laskuri, matkailuauto, ajoneuvovero, seisontapäivät, kustannuslaskenta, liikennekäytöstä poisto, matkailuauton vakuutus">
+    -->
 
     <!-- Open Graph Tags (for social media sharing) -->
-    <meta property="og:title" content="Ajoneuvoverolaskuri matkailuajoneuvoille - Kustannusten Arviointi">
+    <!-- <meta property="og:title" content="Ajoneuvoverolaskuri matkailuautoille - Kustannusten Arviointi">
     <meta property="og:description" content="Helppokäyttöinen laskuri matkailuajoneuvojen ajoneuvoveron ja vakuutusten kustannusten arviointiin. Sisältää seisontapäivien ja liikennekäytöstä poiston huomioimisen.">
     <meta property="og:image" content="https://example.com/laskuri-thumbnail.jpg">
     <meta property="og:url" content="https://m1kma.github.io/ajoneuvoverolaskuri/">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="website"> -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -59,8 +60,8 @@
     <div class="container">
         <div class="row">
             <div>
-                <h1 class="text-center fw-bold mt-4">Ajoneuvoverolaskuri matkailuajoneuvoille</h1>
-                <p class="text-center"><b>Tällä laskurilla voit arvioida karkeasti ajoneuvoveron ja vakuutusten vuosikustannukset.</b> Laskuri ottaa huomioon myös seisontapäivät. Laskuria voi käyttää esimerkiksi arvioimaan miten ajoneuvon poisto liikennekäytöstä vaikuttaa vuosikustannuksiin. Laskurissa on otettu huomioon uusi korotettu dieselvero 5,5 senttiä. Laskuri on suunniteltu erityisesti matkailuajoneuvojen kustannuslaskentaan.</p>
+                <h1 class="text-center fw-bold mt-4">Ajoneuvoverolaskuri matkailuautoille</h1>
+                <p class="text-center"><b>Tällä laskurilla voit arvioida karkeasti ajoneuvoveron ja vakuutusten vuosikustannukset.</b> Laskuri ottaa huomioon myös seisontapäivät. Laskuria voi käyttää esimerkiksi arvioimaan miten ajoneuvon poisto liikennekäytöstä vaikuttaa vuosikustannuksiin. Laskurissa on otettu huomioon uusi korotettu dieselvero 5,5 senttiä (2026 eteenpäin). Laskuri on suunniteltu erityisesti matkailuautojen kustannuslaskentaan.</p>
                 <!--
                 Henkilö- ja pakettiautojen päästöt mitattiin vuosiin 2018-2019 asti NEDC-mittaustavan mukaisena.
                 Ajoneuvoveron perusveron määrä on 53,29 - 654,44 euroa vuodessa auton hiilidioksidipäästöistä riippuen.
@@ -72,7 +73,7 @@
 
         <div class="row">
             <div class="col-12 col-lg-8 bg-white p-3 ">
-                <div class="mb-4">
+                <div class="">
                     <label class="fw-bold mb-1">Käyttövoimavero (dieselvero) Snt/pv/100 kg</label><br>
 
                     <input type="radio" class="btn-check" name="options-outlined" id="radio-09" autocomplete="off" onclick="calculate()" checked>
@@ -82,7 +83,7 @@
                     <label class="btn btn-outline-primary" for="radio-55">5,5 senttiä</label>
                 </div>
 
-                <div class="mb-3">
+                <div class="mt-4">
                     <label for="kokonaismassa-slider" class="fw-bold">Ajoneuvon kokonaismassa (kg)</label><br>
                     <div class="w-100 text-center">
                         <span class="slider-value" id="slider1-value">3500</span>
@@ -98,9 +99,9 @@
 
                     <div class="mb-1 mt-1">
                         <input type="radio" class="btn-check" name="mittaustapa" id="radio-nedc" autocomplete="off" onclick="calculate()">
-                        <label class="btn btn-outline-primary" for="radio-nedc">NEDC</label>
+                        <label class="btn btn-outline-primary" for="radio-nedc" data-bs-toggle="tooltip" data-bs-placement="top" title="Vanha mittaustapa ennen 2017 rekisteröidyt autot">NEDC</label>
                         <input type="radio" class="btn-check" name="mittaustapa" id="radio-wltp" autocomplete="off" onclick="calculate()" checked>
-                        <label class="btn btn-outline-primary" for="radio-wltp">WLTP</label>
+                        <label class="btn btn-outline-primary" for="radio-wltp" data-bs-toggle="tooltip" data-bs-placement="top" title="Uusi mittaustapa 2017 jälkeen rekisteröidyt autot">WLTP</label>
                         <input type="radio" class="btn-check" name="mittaustapa" id="radio-massa" autocomplete="off" onclick="calculate()">
                         <label class="btn btn-outline-primary" for="radio-massa">Kokonaismassan mukaan</label>
                     </div>
@@ -126,9 +127,9 @@
                 </div>
 
                 <div class="mt-4">
-                    <label for="kaytostapoistot-slider" class="fw-bold">Käytöstäpoistojen määrä vuodessa</label><br>
+                    <label for="kaytostapoistot-slider" class="fw-bold">Käytöstäpoistojen lukumäärä vuodessa</label><br>
                     <label class="sublabel-style">Kuinka monta kertaa ajoneuvo poistetaan
-                        liikennekäytöstä vuoden aikana? Liikennekäytöstä poisto maksaa 6€ / kerta, eli ajoneuvo kannattaa pitää käytössä vähintään muutaman päivän kerrallaan.</label><br>
+                        liikennekäytöstä vuoden aikana? Liikennekäytöstä poisto maksaa 6€ / kerta.</label><br>
                     <div class="w-100 text-center">
                         <span class="slider-value" id="slider3-value">0</span>
                         <span class="slider-value">kertaa vuodessa</span>
@@ -147,6 +148,16 @@
                 </div>
 
                 <div class="mt-4">
+                    <label for="liikennevakuutus-slider" class="fw-bold">Liikennevakuutus vuodessa €</label><br>
+                    <label class="sublabel-style">Syötä liikennevakuutuksen hinta vuodessa. Laskuri vähentää seisontapäivät liikennevakuutuksen vuosikustannuksesta.</label><br>
+                    <div class="w-100 text-center">
+                        <span class="slider-value" id="slider6-value">250</span>
+                        <span class="slider-value">€</span>
+                    </div>
+                    <input type="range" id="liikennevakuutus-slider" class="w-100" min="0" max="1000" value="250">
+                </div>
+
+                <div class="mt-4">
                     <label for="kaskovakuutus-slider" class="fw-bold">Alennus kaskovakuutuksesta seisonnassa</label><br>
                     <label class="sublabel-style">Laskuri laskee seisontapäiville alennetun hinnan kaskovakuutuksen täydestä hinnasta. Valitse kuinka paljon seisontavakuutuksen alennus on kaskon vuosihinnasta.</label><br>
 
@@ -159,16 +170,6 @@
                         <label class="btn btn-outline-primary" for="radio-75-alennus">75% alennus</label>
                     </div>
                 </div>
-
-                <div class="mt-4">
-                    <label for="liikennevakuutus-slider" class="fw-bold">Liikennevakuutus vuodessa €</label><br>
-                    <label class="sublabel-style">Syötä liikennevakuutuksen hinta vuodessa. Laskuri vähentää seisontapäivät liikennevakuutuksen vuosikustannuksesta.</label><br>
-                    <div class="w-100 text-center">
-                        <span class="slider-value" id="slider6-value">250</span>
-                        <span class="slider-value">€</span>
-                    </div>
-                    <input type="range" id="liikennevakuutus-slider" class="w-100" min="0" max="1000" value="250">
-                </div>
             </div>
 
 
@@ -179,18 +180,20 @@
                 <div class="row">
                     <label class="numeric-box-label fw-bold">VEROT</label>
                 </div>
+
                 <div class="row">
-                    <label class="numeric-box-label col">Käyttövoimavero (dieselvero)</label>
+                    <label class="numeric-box-label col" data-bs-toggle="tooltip" data-bs-placement="top" title="Perusvero määräytyy valmistajan ilmoittaman CO2-päästöarvon eli hiilidioksidipäästöarvon perusteella.
+                    ">Perusvero</label>
                     <div class="col">
-                        <span class="slider-value" id="result-kayttovoimavero-value">0</span>
+                        <span class="slider-value" id="result-perusvero-value">0</span>
                         <span class="slider-value">€</span>
                     </div>
                 </div>
 
                 <div class="row">
-                    <label class="numeric-box-label col">Perusvero</label>
+                    <label class="numeric-box-label col" data-bs-toggle="tooltip" data-bs-placement="top" title="Käyttövoimavero määräytyy sillä perusteella, mikä on ajoneuvon käyttövoima ja ajoneuvon suurin sallittu kokonaismassa tieliikenteessä.">Käyttövoimavero (dieselvero)</label>
                     <div class="col">
-                        <span class="slider-value" id="result-perusvero-value">0</span>
+                        <span class="slider-value" id="result-kayttovoimavero-value">0</span>
                         <span class="slider-value">€</span>
                     </div>
                 </div>
@@ -265,6 +268,12 @@
 
         <div class="row bg-primary text-center border-top border-white p-2 text-white fw-bold sticky-bottom">
             <div>YHTEENSÄ: <span id="result-kaikkiyhteensa-value-sticky">0</span> €</div>
+        </div>
+
+        <div class="row mt-4">
+            <h3>Vinkit</h3>
+            <p class="fw-bold">Miten paljon uusi käyttövoimavero (5,5 senttiä) korottaa ajoneuvon vuosikustannuksia?</p>
+            <p>Aseta ensin käyttövoimaveroksi 0,9 senttiä. Aseta muut asetukset kohdalleen. Vaihda sen jälkeen käyttövoimaveroksi 5,5 senttiä, niin saat tulokseksi kustannukset uudella verolla.</p>
         </div>
 
         <div class="row mt-4">
