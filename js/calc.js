@@ -1,6 +1,6 @@
 
 // Laskentalogiikka ja verotaulukot ajoneuvoverolaskurille
-// (c) 2025 Mika Mäkelä
+// (c) 2025 polkujenlumo.com
 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
